@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#haha{
+    transition: 2s;
+    text-transform: uppercase;
+    animation-name: zoom;
+    animation-duration: 10s;
+    font-size: 10rem;
+    color: hsl(0, 86%, 70%);
+    text-align: center;
+}
+@keyframes zoom{
+    to{font-size: 20rem;}
+    
+}
+#text-side{
+   
+    background-image: url(./image/bg-pattern-desktop.svg);
+    background-size:cover;
+    
+    width:60%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: space-evenly;
+    
+    
+}
+#image{
+    width: 40%;
+    
+    
+}
+#logo{
+    width: 230px;
+    position:absolute;
+    top:2rem;
+    left: 5rem;
+  
+}
+#text-side h2{
+    margin-top: 6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 6rem;
+    letter-spacing: 0.5rem;
+    color:hsl(0, 52%, 75%);
+}
+#text-side h1{
+    margin-top: -1rem;
+    font-size:8rem;
+    text-transform: uppercase;
+    font-weight: 350;
+    letter-spacing: 0.5rem;
+
+}
+#email-input{
+    height: 3rem;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#input{
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 100%;
+    border-radius: 50px;
+    border:solid;
+    border-color: hsl(0, 52%, 75%);
+    background-color: transparent;
+    outline:none;
+    padding-left: 20px;
+}
+#btngo{
+    transition: 0.5s;
+    
+    height: 4rem;
+    border-radius: 50px;
+    border: none;
+    background-image: linear-gradient( to left , hsl(0, 86%, 70%), hsl(0, 55%, 86%));
+    width: 6rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    
+}
+#error{
+    position: absolute;
+    right: 6.5rem;
+    height: 2rem;
+    width: 2rem;
+    display: none;
+    transition: 0.3s;
+}
+#errormessage{
+    margin-top: -1rem;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    color:red;
+    display: none;
+    transition: 0.3s;
+
+}
+#btngo:hover{
+    background-image: linear-gradient( to left , hsl(0, 34%, 43%), hsl(0, 33%, 49%));
+}
+#btngo:active{
+    background-image: linear-gradient( to left , hsl(248, 13%, 12%), hsl(232, 10%, 16%));
+}
+#haha{
+    display: none;
+}
+#text-side p{
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+#container{
+    height: 100vh;
+}
+@media only screen and (max-width:980px){
+    #text-side{
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        bottom:0;
+        background-color: white;
+       
+        
+    }
+    #text-side h2{
+        margin-top: 0;
+        font-size: 7rem;
+    }
+    #logo{
+        position: absolute;
+        bottom:0;
+        background-color: white;
+        padding: 2%;
+        border-radius: 30px;
+    }
+    #image{
+        width: 100%;
+        z-index: -10;
+    }
+    #text-side h1{
+        font-size: 10rem;
+    }
+    #text-side p{
+        font-size: 2.5rem;
+    }
+    #email-input{
+        width: 100%;
+        height: 6rem;
+    }
+    #input{
+        height: 100%;
+        font-size: 2rem;
+    }
+    #btngo{
+        height: 100%;
+        width: 9rem;
+    }
+    #error{
+        right: 10rem;
+    }
+    @media (orientation:landscape){
+        body{
+            overflow: hidden;
+        }
+        #image{
+            /* display: none; */
+            width: 45%;
+            
+        }
+        #text-side{
+            position: absolute;
+            right: 0;
+            height: 100vh;
+            width: 60%;
+            top:0;
+        }
+        #container{
+            height:100vh ;
+            
+        }
+        #text-side h2{
+            font-size: 3rem;
+        }
+        #text-side h1{
+            font-size: 4.5rem;
+        }
+        #text-side p{
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+        }
+        #logo{
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            width: 12rem;
+        }
+        #input{
+            padding-right:6.3rem ;
+            
+        }
+        #email-input{
+            height: 4rem;
+        }
+        #btngo{
+            width: 6rem;
+        }
+        #error{
+            margin-right: -3.5rem;
+        }
+        @keyframes zoom{
+            to{font-size: 15rem;
+            }
+    }
+}
+
+    
